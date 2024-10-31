@@ -74,23 +74,6 @@ namespace TicTacToe
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         static void boardchecker(char[,] board, char playerhand, int b1, int b2, int b3, int b4, int b5, int b6)
         {
             // Possible combination of victory
@@ -104,7 +87,6 @@ namespace TicTacToe
 
         }
 
-
         static void Intialize(char[,] board)
         {
             for (int row = 0; row < 3; row++)
@@ -115,10 +97,6 @@ namespace TicTacToe
                 }
             }
         }
-
-
-
-
         static void Output(char[,] board)
         {
             for (int row = 0; row < 3; row++)
@@ -132,7 +110,5 @@ namespace TicTacToe
                 Console.WriteLine("");
             }
         }
-
-
     }
 }
