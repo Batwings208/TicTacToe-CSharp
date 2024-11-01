@@ -38,7 +38,7 @@ This is a C# program. It is a console-based imitation of the classic Tic-Tac-Toe
    - Parameters:
      char[,] board: The 3x3 grid/board array
      char playerhand: The current player's character ('X' or 'O')
-     int b1, b2, b3, b4, b5, b6: Positions on the board array representing pontential win conditions        (row, column, diagonal)
+     int b1, b2, b3, b4, b5, b6: Positions on the board array representing pontential win conditions (row, column, diagonal)
    If win condition is met, program announces the winner and terminates the program
 
 
@@ -56,35 +56,26 @@ This is a C# program. It is a console-based imitation of the classic Tic-Tac-Toe
 4. **bool RUN**:
    Controls game loop. Program to continue running while bool RUN is _true_.
 
-     
 
+**Game Logic**
 
+1. **Turn-based Input**:
+   _While_ loop _Main_ method allows for players to take turns
+   Players choose which row and column they want to place their mark
+   Program adjusts user input to fit with array indexing by subracting 1
 
-   
--
-**boardchecker(char[,] board, char playerhand, int b1, int b2, int b3, int b4, int b5, int b6)**
-Checks combination entered and returns Victory if order follows rule of tictactoe or does nothing.
+2. **Player Switch**:
+   After each move, program switches player turn
 
--
-**Intialize(char[,] board)**
-Creates the a 3x3 board
+3. **Victory Check**:
+   After each move, program checks all possible combinations of a win through _boardchecker_ method
+   If player meets condition of win, program announces winner and exits out
 
--
-**Output(char[,] board)**
-Visualization of the 3x3 board in command-line. Does not update.
-
--
-**Main()**
-Game runs here. Board is created, visualization of board. Runs till either user wins or the board fills up. Checks if someone won after every try.
-
--
-
-
-**Important**:
-The code is in **Program.cs** if you didn't know.
+4. **End of Game**:
+   If a player meets one of the winning conditions, the program announces the winner and terminates the program
 
 
 **Advise**:
 Use parts of my code and write the rest yourself so you learn something too :)
 
-Good Luck! Please Enjoy! 😊
+Good Luck! Please Enjoy!
